@@ -134,3 +134,7 @@ Finally:
     ```
     docker run -p 8000:8000 captainfedora/concert:v1
     ```
+
+## Note:
+
+Make sure {your OpenShift URL here} and {your Code Engine URL here} point to the applicable URLs. You should have them assuming you spun up the Songs and Pictures microservices
