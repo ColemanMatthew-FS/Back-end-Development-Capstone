@@ -36,7 +36,7 @@ def index(request):
 
 def songs(request):
     # songs = {"songs":[{"id":1,"title":"duis faucibus accumsan odio curabitur convallis","lyrics":"Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis."}]}
-    songs = req.get("http://songs-sn-labs-matthewcolem.labs-prod-openshift-san-a45631dc5778dc6371c67d206ba9ae5c-0000.us-east.containers.appdomain.cloud/song").json()
+    songs = req.get("{Your OpenShift URL here}").json()
     return render(request, "songs.html", {"songs": songs["songs"]})
 
 
@@ -49,7 +49,7 @@ def photos(request):
 #     "event_city": "Washington",
 #     "event_date": "11/16/2022"
 # }]
-    photos = req.get("https://pictures.1for4ryy5um9.us-south.codeengine.appdomain.cloud/picture").json()
+    photos = req.get("{your Code Engine URL here}").json()
     return render(request, "photos.html", {"photos": photos})
 
 def login_view(request):
